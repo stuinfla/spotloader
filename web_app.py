@@ -82,6 +82,7 @@ def download_worker(job_id, spotify_url):
         logging.error(f"Job {job_id} CRASHED: {e}", exc_info=True)
         jobs[job_id]['state'] = 'FAILURE'
         jobs[job_id]['status'] = f'An error occurred: {e}'
+        logging.critical(f"Job {job_id} failed with exception:", exc_info=True)
 
 # --- API Endpoints ---
 @app.route('/')
