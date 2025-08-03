@@ -1,0 +1,120 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1DB954; /* Spotify Green */
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #b3b3b3;
+    margin-bottom: 30px;
+}
+
+#download-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#spotify-url {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    background-color: #282828;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+#spotify-url::placeholder {
+    color: #808080;
+}
+
+#submit-button, .button {
+    background-color: #1DB954;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#submit-button:hover, .button:hover {
+    background-color: #1ed760;
+}
+
+.hidden {
+    display: none;
+}
+
+#status-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-left-color: #1DB954;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#status-message {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+#result-container {
+    margin-top: 30px;
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#result-container h2 {
+    margin-top: 0;
+    color: #1DB954;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #808080;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Downloader</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Spotify Downloader</h1>
+            <p>Enter a Spotify URL to download the tracks as high-quality MP3s.</p>
+        </header>
+
+        <main>
+            <form id="download-form">
+                <input type="text" id="spotify-url" name="spotify_url" placeholder="Enter Spotify track, album, or playlist URL" required>
+                <button type="submit" id="submit-button">Download</button>
+            </form>
+
+            <div id="status-container" class="hidden">
+                <div class="spinner"></div>
+                <p id="status-message">Starting download...</p>
+            </div>
+
+            <div id="result-container" class="hidden">
+                <h2>Download Complete</h2>
+                <p id="result-message"></p>
+                <a href="#" id="download-link" class="button" download>Download ZIP</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Cascade</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
