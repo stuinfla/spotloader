@@ -47,7 +47,9 @@ class SpotifyLoader:
             return download_path
 
         except Exception as e:
-            self.logger.error(f"An error occurred: {e}")
+            self.logger.error(f"DETAILED ERROR in process_url: {str(e)}")
+            import traceback
+            self.logger.error(f"FULL TRACEBACK: {traceback.format_exc()}")
             return None
 
     def _process_track(self, track_info):
