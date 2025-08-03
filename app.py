@@ -11,7 +11,6 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('spotify_loader.log'),
         logging.StreamHandler()
     ]
 )
