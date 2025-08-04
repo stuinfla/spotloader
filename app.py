@@ -26,7 +26,7 @@ class SpotifyLoader:
         """Processes a Spotify URL and returns the path to the downloaded content."""
         download_path = None
         try:
-            content_type, content_id = Utils.get_spotify_content_type_and_id(spotify_url)
+            content_type, content_id = Utils.extract_spotify_info(spotify_url)
             if not content_type:
                 self.logger.error("Invalid or unsupported Spotify URL.")
                 return None
